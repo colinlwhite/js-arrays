@@ -31,3 +31,23 @@ palChecker('mom');  // yes
 palChecker('monkeybutt'); // no
 palChecker('racecar'); // yes
 
+let animals = ['snakes', 'spiders', 'gophers', 'big spiders'];
+const lastItem = animals.pop(); // "big spiders"
+const firstItem = animals.shift(); // snakes 
+
+console.log(lastItem);
+console.log(firstItem);
+
+// Push is the most used array method 
+
+animals.push('bat'); // end
+animals.unshift('baby hippos'); // start 
+console.log(animals);
+
+// 1. What is your starting value - 0;
+// 2. What is your stopping value - something.length;
+// 3. How are you incrementing - +1 
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+}
