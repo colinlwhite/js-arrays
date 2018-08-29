@@ -80,7 +80,6 @@ let elizabethSanger = {
         printToDom(newString, 'voterRegistration');
   };
 
-voterRegistrationStringBuilder();
 
 
 const donationFormStringBuilder = () => {
@@ -88,6 +87,34 @@ const donationFormStringBuilder = () => {
     printToDom(newString, 'donationForm');
 }
 
+
+const statementStringBuilder = () => {
+    let newString = ''; 
+    for (let i = 0; i < elizabethSanger.statements.length; i++) {
+        newString += `<div class="statement">`
+        newString += `<h3>${elizabethSanger.statements[i].statement}</h3>`;
+        newString += `<h6>${elizabethSanger.statements[i].category}</h6>`;
+        newString += `</div>`;
+    }
+    printToDom(newString, 'statements');
+};
+
+voterRegistrationStringBuilder();
 donationFormStringBuilder();
+statementStringBuilder();
+
+
+
+
+
+
+// PART 3 EXAMPLE 
+
+const updatevoterRegistration = (newURL) => {
+    elizabethSanger.voterRegistrationUrl = newURL; 
+    voterRegistrationStringBuilder();
+};
+
+updatevoterRegistration('classtracker.zoeames.com');
 
 
