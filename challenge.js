@@ -81,7 +81,6 @@ let elizabethSanger = {
   };
 
 
-
 const donationFormStringBuilder = () => {
     const newString = `<a href="https://${elizabethSanger.donationFormUrl}" target="_blank">Donate Here</a>`;
     printToDom(newString, 'donationForm');
@@ -99,10 +98,80 @@ const statementStringBuilder = () => {
     printToDom(newString, 'statements');
 };
 
+
+const eventStringBuilder = () => {
+  let newString = '';
+  for (let i = 0; i < elizabethSanger.events.length; i++) {
+      newString += `<div class="events">`
+      newString += `<h4>${elizabethSanger.events[i].date}</h4>`;
+      newString += `<h3>${elizabethSanger.events[i].title}</h3>`;
+      newString += `<h3>${elizabethSanger.events[i].description}</h3>`;
+      newString += `</div>`;
+  }
+  printToDom(newString, 'events');
+};
+
+
+const districtStringBuilder = () => {
+    const anotherString = `<h1>${elizabethSanger.congressionalDistrict}</h1>`;
+    printToDom(anotherString, 'congressionalDistrict');
+};
+
+
+const volunteerStringBuilder = () => {
+  let newString = ''; 
+  for (let i = 0; i < elizabethSanger.volunteers.length; i++) {
+      newString += `<div class="vols">`
+      newString += `<h1>${elizabethSanger.volunteers[i].name}</h1>`;
+      newString += `<h1>${elizabethSanger.volunteers[i].address}</h1>`;
+      newString += `<h2>${elizabethSanger.volunteers[i].email}</h2>`;
+      newString += `<h2>${elizabethSanger.volunteers[i].phone}</h2>`;
+      newString += `<h3>${elizabethSanger.volunteers[i].availability}</h3>`;
+      newString += `<h3>${elizabethSanger.volunteers[i].activities}</h3>`;
+      newString += `<div>`;
+  }
+  printToDom(newString, 'volunteers');
+}
+
+
+const bioStringBuilder = () => {
+  const theString = `<h4>${elizabethSanger.biography}</h4>`;
+  printToDom(theString, 'biography');
+}
+
+
+const missionStringBuilder = () => {
+  const daString = `<h5>${elizabethSanger.missionStatement}</h5>`;
+  printToDom(daString, 'missionStatement');
+}
+
+
+const imageStringBuilder = () => {
+  let thaString = '';
+  for (let i = 0; i < elizabethSanger.images.length; i++) {
+        thaString += `<div class="img">`
+        thaString += `<img src="${elizabethSanger.images[i].imageUrl}">`;
+        thaString += `<h3>${elizabethSanger.images[i].description}</h3>`;
+        thaString += `<h2>${elizabethSanger.images[i].type}</h2>`;
+        thaString += `</div>`;
+  }
+  printToDom(thaString, 'images');
+}
+
+
+
+
+// CALLING THE 9 FUNCTIONS 
+
 voterRegistrationStringBuilder();
 donationFormStringBuilder();
 statementStringBuilder();
-
+eventStringBuilder();
+districtStringBuilder();
+volunteerStringBuilder();
+bioStringBuilder();
+missionStringBuilder();
+imageStringBuilder();
 
 
 
