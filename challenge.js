@@ -159,8 +159,6 @@ const imageStringBuilder = () => {
 }
 
 
-
-
 // CALLING THE 9 FUNCTIONS 
 
 voterRegistrationStringBuilder();
@@ -174,16 +172,46 @@ missionStringBuilder();
 imageStringBuilder();
 
 
-
-
-
-// PART 3 EXAMPLE 
+// PART 3 OF JS ARRAYS - CHANGING THE STATE OF THE OBJECT / MODIFYING THE ARRAY
 
 const updatevoterRegistration = (newURL) => {
     elizabethSanger.voterRegistrationUrl = newURL; 
     voterRegistrationStringBuilder();
 };
 
+const updateDonationForm = (newSite) => {
+     elizabethSanger.donationFormUrl = newSite;
+     donationFormStringBuilder();
+};
+
+const updateStatements = (newStatements) => {
+    elizabethSanger.statements[2].statement = newStatements;
+    statementStringBuilder();
+};
+
+const updateEvents = (newEvent) => {
+  elizabethSanger.events[3].title = newEvent;
+  eventStringBuilder();
+};
+
+const updateDistrict = (newDis) => {
+  elizabethSanger.congressionalDistrict = newDis;
+  districtStringBuilder();
+}
+
+const 
+
+// CALLING THE UPDATED FUNCTIONS
+
 updatevoterRegistration('classtracker.zoeames.com');
+updateDonationForm('www.papajohns.com/order/specials');
+updateStatements('pie for only Colin');
+updateEvents('lifting weights');
+updateDistrict('14');
+
+
+
+
+
 
 
