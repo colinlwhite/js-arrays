@@ -199,7 +199,26 @@ const updateDistrict = (newDis) => {
   districtStringBuilder();
 }
 
-const 
+const updateVolunteers = (newVol) => {
+  elizabethSanger.volunteers[2].name = newVol;
+  volunteerStringBuilder();
+}
+
+const updateBio = (newBio) => {
+  elizabethSanger.biography = newBio;
+  bioStringBuilder();
+}
+
+const updateMission = (newMission) => {
+  elizabethSanger.missionStatement = newMission;
+  missionStringBuilder();
+}
+
+const updateImage = (newImage) => {
+  elizabethSanger.images[1].imageUrl = newImage;
+  imageStringBuilder();
+}
+
 
 // CALLING THE UPDATED FUNCTIONS
 
@@ -208,6 +227,10 @@ updateDonationForm('www.papajohns.com/order/specials');
 updateStatements('pie for only Colin');
 updateEvents('lifting weights');
 updateDistrict('14');
+updateVolunteers('Colin');
+updateBio("I've been groomed all my life for politics");
+updateMission("I want to index the world’s information.");
+updateImage('https://placeimg.com/640/480/tech');
 
 
 
